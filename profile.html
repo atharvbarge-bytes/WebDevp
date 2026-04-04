@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+       <header class="top-bar">
+           <div class="logo-container">
+        <img src="logo.png" alt="Logo" class="logo">
+    </div>
+                <h2><i>GridFlow</h2>
+                <div class="user-profile">Ashish</div>
+            </header>
+            <br>
+            <div class="user-profile">Settings</div>
+            </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            
+      
+            <br>
+            <br>
+
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="db.html">Dashboard</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="profile.html" class="active">Profile</a>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+         <br><br><br><br>
+
+            <section class="stats-grid">
+                
+                <div class="card">
+                    <h3>UI|UX Designer</h3>
+                    <p class="value">Atharv</p>
+                    <span class="trend positive">B.Design</span>
+                    <img src="atharv.png" alt="atharv" class="card1">
+                    
+                </div>
+                <div class="card">
+                    <h3>Designs Made</h3>
+                    <p class="value">120</p>
+                  
+                </div>
+                <div class="card">
+                    <h3>Portfolio Views</h3>
+                    <p class="value">42</p>
+                    <span class="trend negative">-3</span>
+                </div>
+            </section>
+
+            <section class="content-grid">
+                <div class="card large-card">
+                    <h3>Revenue Growth</h3>
+                    <div id="chart-placeholder">Chart will render here...</div>
+                    <img src="rgchart.png" alt="rgchart" class="card2">
+                </div>
+                <div class="card small-card">
+                    <h3>Recent Work</h3>
+                    <ul>
+                        <li>Simple Web UI|UX for ₹1200 </li>
+                        <li>Freelancing(₹2500) </li>
+                        <li>Mobile App UI</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="db.js"></script>
+</body>
+</html>

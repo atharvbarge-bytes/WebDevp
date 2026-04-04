@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard</title>
+    <link rel="stylesheet" href="db.css">
+</head>
+<body>
+       <header class="top-bar">
+           <div class="logo-container">
+        <img src="logo.png" alt="Logo" class="logo">
+    </div>
+                <h2><i>GridFlow</h2>
+                <div class="user-profile">Ashish</div>
+            </header>
+            <br>
+            <div class="user-profile">Settings</div>
+            </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            
+      
+            <br>
+            <br>
+
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="db.html"  class="active">Dashboard</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+         <br><br><br><br>
+
+            <section class="stats-grid">
+                
+                <div class="card">
+                    <h3>Total Sales</h3>
+                    <p class="value">$24,500</p>
+                    <span class="trend positive">+12%</span>
+                </div>
+                <div class="card">
+                    <h3>Active Users</h3>
+                    <p class="value">1,204</p>
+                    <span class="trend positive">+5%</span>
+                </div>
+                <div class="card">
+                    <h3>Bounce Rate</h3>
+                    <p class="value">42.3%</p>
+                    <span class="trend negative">-2%</span>
+                </div>
+            </section>
+
+            <section class="content-grid">
+                <div class="card large-card">
+                    <h3>Revenue Growth</h3>
+                    <div id="chart-placeholder">Chart will render here...</div>
+                    <img src="rgchart.png" alt="rgchart" class="card large-card">
+                </div>
+                <div class="card small-card">
+                    <h3>Recent Tasks</h3>
+                    <ul>
+                        <li>Update UI </li>
+                        <li>Fix Login Bug </li>
+                        <li>Client Meeting </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="db.js"></script>
+</body>
+</html>

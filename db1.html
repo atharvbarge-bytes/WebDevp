@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard</title>
+    <link rel="stylesheet" href="db.css">
+</head>
+<body>
+    <header class="top-bar">
+        <h2><i>GridFlow</i></h2>
+        
+        <div class="user-profile">
+            Viewing as: 
+            <select id="user-selector" onchange="loadUserData()">
+                <option value="Ashish">Ashish</option>
+                <option value="Priya">Priya</option>
+                <option value="Rahul">Rahul</option>
+            </select>
+        </div>
+        
+        <div class="user-profile">Settings</div>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <br><br>
+            <nav>
+                <a href="#" class="active">Home</a>
+                <a href="#">Dashboard</a>
+                <a href="#">Screens</a>
+                <a href="#">Profile</a>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+         <br><br><br><br>
+
+            <section class="stats-grid">
+                <div class="card">
+                    <h3>Total Sales</h3>
+                    <p class="value" id="sales-val">$0</p>
+                    <span class="trend" id="sales-trend">+0%</span>
+                </div>
+                <div class="card">
+                    <h3>Active Users</h3>
+                    <p class="value" id="users-val">0</p>
+                    <span class="trend" id="users-trend">+0%</span>
+                </div>
+                <div class="card">
+                    <h3>Bounce Rate</h3>
+                    <p class="value" id="bounce-val">0%</p>
+                    <span class="trend" id="bounce-trend">-0%</span>
+                </div>
+            </section>
+
+            <section class="content-grid">
+                <div class="card large-card">
+                    <h3>Revenue Growth</h3>
+                    <div id="chart-placeholder">Chart will render here...</div>
+                </div>
+                <div class="card small-card">
+                    <h3>Recent Tasks</h3>
+                    <ul>
+                        <li>Update UI 🟢</li>
+                        <li>Fix Login Bug 🟡</li>
+                        <li>Client Meeting 🔴</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="db1.js"></script>
+</body>
+</html>
