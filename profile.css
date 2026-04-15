@@ -31,6 +31,95 @@ body { background-color: #f4f7fe; color: #2d3748; }
     border-radius: 45%;
     
     
+        
+}
+.chart-container {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chart-container h2 {
+  text-align: center;
+  color: #333333;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  font-size: 1.5rem;
+}
+
+/* Flexbox setup to align the bars at the bottom */
+.bar-chart {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 250px; /* Overall height of the graph */
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+  gap: 10px;
+}
+
+/* Individual bar container */
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  width: 60px;
+}
+
+/* The actual colored bar */
+.bar {
+  width: 100%;
+  
+  background: linear-gradient(to top, #2193b0 0%, #6dd5ed 100%);
+  border-radius: 6px 6px 0 0;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Hover effects for the bar */
+.bar:hover {
+  opacity: 0.85;
+  transform: scaleY(1.02);
+  transform-origin: bottom;
+}
+
+/* Tooltip that pulls the data-value from the HTML */
+.bar::after {
+  content: attr(data-value);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #444;
+  opacity: 0;
+  transition: opacity 0.3s ease, top 0.3s ease;
+  background: #f4f4f4;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Show the tooltip on hover */
+.bar:hover::after {
+  opacity: 1;
+  top: -35px;
+}
+
+/* Text labels at the bottom (Q1, Q2, etc.) */
+.label {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #666666;
+  font-weight: 500;
 }
 .card2{
     height: 400px;
