@@ -74,7 +74,7 @@ body { background-color: #f4f7fe; color: #2d3748; }
 /* The actual colored bar */
 .bar {
   width: 100%;
-  /* A nice upward-trending blue/green gradient */
+  
   background: linear-gradient(to top, #2193b0 0%, #6dd5ed 100%);
   border-radius: 6px 6px 0 0;
   transition: all 0.3s ease;
