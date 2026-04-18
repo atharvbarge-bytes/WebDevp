@@ -8,67 +8,49 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: #0a0a0a;
 }
 
-/* --- NEW TOP BAR CODE --- */
+/* --- TOP BAR --- */
 .top-bar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 60px;
-    background: rgba(0, 0, 0, 0.907); /* Semi-transparent black */
-    backdrop-filter: blur(10px);    /* Matches your login box blur */
-    border-bottom: 1px solid rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
     display: flex;
     align-items: center;
-    justify-content: center;
-    z-index: 1000; /* Keeps it above everything */
+    justify-content: space-between; /* LOGO LEFT, TEXT CENTER */
+    
+    padding: 0 20px;
+    z-index: 1000;
 }
+
+/* Logo */
 .logo {
     height: 45px;
     width: 50px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 10px;
+}
+
+/* Center text */
+.content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     
-}
-.top-bar-content {
-    width: 85%;
-    max-width: 1100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.top-bar .logo {
-    color: #ffffff;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
     font-weight: 900;
-    letter-spacing: 1px;
-    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 0 10px 20px rgba(255, 255, 255, 0.5);
 }
 
-
-.top-bar .logo span {
-    color: #fbbf24; /* Matching your gold color */
-}
-
-
-.top-bar nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 14px;
-    opacity: 0.8;
-    transition: 0.3s;
-}
-
-.top-bar nav a:hover {
-    opacity: 1;
-    color: #fbbf24;
-}
-/* --- END TOP BAR CODE --- */
+/* --- END TOP BAR --- */
 
 /* Background Layers */
 .bg-layer {
@@ -77,7 +59,7 @@ body {
     left: -5%;
     width: 110%;
     height: 110%;
-    background-image: url("okk.png");
+    background-image: url("../images/okk.png");
     background-size: cover;
     background-position: center;
     z-index: -2;
@@ -100,7 +82,7 @@ body {
     100% { transform: scale(1.08) translate(10px, 5px); }
 }
 
-/* Flexbox Layout Wrapper */
+/* Layout */
 .main-wrapper {
     display: flex;
     width: 85%;
@@ -108,10 +90,10 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-    margin-top: 60px; /* Pushes content down so it doesn't overlap with bar */
+    margin-top: 60px;
 }
 
-/* Left Side Text Styling */
+/* Hero Text */
 .hero-text {
     flex: 1;
     color: #ffffff;
@@ -127,11 +109,11 @@ body {
 }
 
 .hero-text span {
-    color: #fbbf24; /* Gold color */
+    color: #fbbf24;
     display: block;
 }
 
-/* Login Card (Right Side) */
+/* Login Box */
 .login-box {
     background: rgba(10, 25, 20, 0.3);
     backdrop-filter: blur(15px);
@@ -154,7 +136,7 @@ body {
     font-size: 1.5rem;
 }
 
-/* Input Fields */
+/* Inputs */
 .input-group {
     position: relative;
     margin-bottom: 30px;
@@ -226,7 +208,7 @@ body {
     box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
 }
 
-/* Animations */
+/* Animation */
 @keyframes fadeInSlide {
     from {
         opacity: 0;
@@ -238,23 +220,16 @@ body {
     }
 }
 
-/* Mobile View */
+/* Mobile */
 @media (max-width: 800px) {
     .main-wrapper {
         flex-direction: column;
         text-align: center;
-        margin-top: 80px; /* More space for mobile */
+        margin-top: 80px;
     }
+
     .hero-text {
         margin-bottom: 40px;
         padding-right: 0;
     }
-}
-.content{
-    font-size: clamp(1.5rem, 2vw, 2.5rem);
-    font-weight: 900;
-    line-height: 1;
-    margin: 0;
-    text-shadow: 0 10px 20px rgba(255, 255, 255, 0.5);
-    color:#fff;
 }
